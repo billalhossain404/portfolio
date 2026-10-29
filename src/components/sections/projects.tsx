@@ -1,4 +1,5 @@
-import { ArrowRight, ArrowUpRight, Github, MoveUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MoveUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { projects, profile } from "@/data/profile";
 import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/reveal";
@@ -29,7 +30,7 @@ export function Projects() {
               </div>
               <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--line)] pt-5">
                 <span className="rounded-full border border-[var(--line)] px-3 py-1.5 font-mono text-[11px] text-[var(--muted)]">{project.type}</span>
-                <a href={project.github} target="_blank" rel="noreferrer noopener" aria-label={`View ${project.name} on GitHub`} className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--foreground)] underline-offset-4 transition hover:text-[var(--accent-strong)] hover:underline"><Github size={16}/> View code <MoveUpRight size={15}/></a>
+                <a href={project.github} target="_blank" rel="noreferrer noopener" aria-label={`View ${project.name} on GitHub`} className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--foreground)] underline-offset-4 transition hover:text-[var(--accent-strong)] hover:underline"><FaGithub size={16}/> View code <MoveUpRight size={15}/></a>
               </div>
             </div>
           </Card>

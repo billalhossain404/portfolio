@@ -19,7 +19,7 @@ export function Navbar() {
       </nav>
       <div className="flex items-center gap-2 sm:gap-3">
         <ThemeSwitch />
-        <Button asChild size="sm" className="hidden sm:inline-flex"><a href={`mailto:${profile.email}`}>Let's talk <ArrowUpRight size={15}/></a></Button>
+        <Button asChild size="sm" className="hidden sm:inline-flex"><a href={`mailto:${profile.email}`}>Let&apos;s talk <ArrowUpRight size={15}/></a></Button>
         <button type="button" aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)} className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] md:hidden">{open ? <X size={19}/> : <Menu size={19}/>}</button>
       </div>
     </div>

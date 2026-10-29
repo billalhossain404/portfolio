@@ -1,11 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 export function ThemeSwitch() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   const { resolvedTheme, setTheme } = useTheme();
-  useEffect(() => setMounted(true), []);
   return (
     <button type="button" aria-label={mounted && resolvedTheme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
       title="Toggle theme" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
